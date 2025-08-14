@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة بلعرير - صفحة هبوط</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0x0zJj/iU+sJz4+h8z7a/o6e0U4lR5G9+d4o+0gTz5Fz5L5/t2/t3/t4/t5/t6/t7/t8/t9/t0/t1/t2/t3/t4/t5/t6/t7/t8/t9/t0=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            direction: rtl; /* Right-to-left for Arabic text */
+            scroll-behavior: smooth;
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        /* Custom animations for entry effects */
+        @keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 20px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .hero-bg {
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/29/05/23/library-1867160_1280.jpg'); /* You can replace this URL with your own image */
+        }
+
+        /* Hover animations for contact links (re-added for full functionality) */
+        .group:hover .group-hover\:rotate-6 { transform: rotate(6deg); }
+        .group:hover .group-hover\:scale-110 { transform: scale(1.1); }
+        .group:hover .group-hover\:shake {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+        @keyframes shake {
+            10%, 90% { transform: translate3d(-1px, 0, 0); }
+            20%, 80% { transform: translate3d(2px, 0, 0); }
+            30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+            40%, 60% { transform: translate3d(4px, 0, 0); }
+        }
+        .group:hover .group-hover\:bounce-out {
+            animation: bounce-out 0.6s ease-out;
+        }
+        @keyframes bounce-out {
+            0% { transform: scale(1); }
+            20% { transform: scale(1.1); }
+            100% { transform: scale(0.9) translateY(0); }
+        }
+        .group:hover .group-hover\:tada {
+            animation: tada 1s ease-in-out;
+        }
+        @keyframes tada {
+            0% { transform: scale(1); }
+            10%, 20% { transform: scale(0.9) rotate(-3deg); }
+            30%, 50%, 70%, 90% { transform: scale(1.1) rotate(3deg); }
+            40%, 60%, 80% { transform: scale(1.1) rotate(-3deg); }
+            100% { transform: scale(1) rotate(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 text-gray-800">
+
+    <header class="bg-blue-800 text-white shadow-lg py-4 w-full">
+        <nav class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <a href="#hero" class="text-3xl font-extrabold mb-4 md:mb-0 hover:text-blue-200 transition-colors duration-300 rounded-lg p-2">
+                مكتبة بلعرير
+            </a>
+            <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-lg font-medium">
+                <li><a href="#hero" class="hover:text-blue-200 transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-blue-200">الرئيسية</a></li>
+                <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-300 pb-1 border-b-2 border-transparent hover:border-blue-200">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-24 flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 hero-bg bg-cover bg-center opacity-30"></div>
+        <div class="relative z-10 px-4 max-w-3xl">
+            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                مرحباً بكم في <span class="text-yellow-300">مكتبة بلعرير</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">
+                بوابة المعرفة والأدوات المدرسية. نوفر لك كل ما تحتاجه للتعلم والنجاح!
+            </p>
+            <a href="#contact" class="inline-block bg-white text-blue-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-100 transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                تواصل معنا الآن
+            </a>
+        </div>
+    </section>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <section id="contact" class="flex flex-col w-full max-w-4xl bg-white p-8 sm:p-10 md:p-12 lg:p-16 rounded-3xl shadow-2xl text-center space-y-6 transform transition-all duration-300 hover:scale-[1.02]">
+            <h3 class="text-4xl font-bold text-center text-blue-700 mb-8">اتصل بنا</h3>
+            <p class="text-lg sm:text-xl text-gray-700">
+                يسعدنا تواصلكم معنا عبر أي وسيلة تناسبكم:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/16n8Utr2QZ/" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center p-4 rounded-xl bg-blue-600 text-white shadow-lg hover:bg-blue-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl group">
+                    <i class="fab fa-facebook-f text-xl ml-3"></i>
+                    <span class="text-lg font-semibold">صفحتنا على فيسبوك</span>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/message/COHKEFFADO3KF1" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center p-4 rounded-xl bg-green-500 text-white shadow-lg hover:bg-green-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl group">
+                    <i class="fab fa-whatsapp text-xl ml-3"></i>
+                    <span class="text-lg font-semibold">واتس اب: 0550341695</span>
+                </a>
+                <!-- Fax -->
+                <div class="flex items-center justify-center p-4 rounded-xl bg-gray-600 text-white shadow-lg">
+                    <i class="fas fa-fax text-xl ml-3"></i>
+                    <span class="text-lg font-semibold">فاكس: 049621695</span>
+                </div>
+                <!-- Telegram -->
+                <a href="https://t.me/belarir3" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center p-4 rounded-xl bg-blue-400 text-white shadow-lg hover:bg-blue-500 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl group">
+                    <i class="fab fa-telegram-plane text-xl ml-3"></i>
+                    <span class="text-lg font-semibold">تيلغرام</span>
+                </a>
+                <!-- Email -->
+                <a href="mailto:belarir3@gmail.com"
+                   class="flex items-center justify-center p-4 rounded-xl bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl group">
+                    <i class="fas fa-envelope text-xl ml-3"></i>
+                    <span class="text-lg font-semibold">البريد الإلكتروني</span>
+                </a>
+                <!-- Location -->
+                <a href="https://www.google.com/maps/place/Belarir+Library/@33.6841285,1.0022453,17z/data=!3m1!4b1!4m6!3m5!1s0x125134701234567:0x123456789abcdef!8m2!3d33.684124!4d1.0048202!16s/g/11vj_4q3y" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center p-4 rounded-xl bg-red-500 text-white shadow-lg hover:bg-red-600 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl col-span-1 md:col-span-2">
+                    <i class="fas fa-map-marker-alt text-xl ml-3"></i>
+                    <span class="text-lg font-semibold">الموقع على الخريطة</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-8 mt-auto">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-lg mb-4">
+                &copy; 2026 مكتبة بلعرير. جميع الحقوق محفوظة.
+            </p>
+            <div class="flex justify-center space-x-6 text-2xl rtl:space-x-reverse">
+                <a href="https://www.facebook.com/share/16n8Utr2QZ/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/message/COHKEFFADO3KF1" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://t.me/belarir3" target="_blank" rel="noopener noreferrer" class="hover:text-blue-200 transition-colors duration-300">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="mailto:belarir3@gmail.com" class="hover:text-blue-200 transition-colors duration-300">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
